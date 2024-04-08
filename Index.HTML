@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="sign.html">
+</head>
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    body{
+        background-color: black;
+    }    
+    .wrapper{
+        width: 330px;
+        padding: 4px 4px;
+        margin: 50px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 10px   25px 38px white;
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(border.png) 30 round;
+    }
+    h1{
+        font-size: 45px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    form input{
+        font-size: 18px;
+        width: 92%;
+        outline: none;
+        border: 1px solid black;
+        padding: 12px 20px;
+        margin-bottom: 16px;
+        border-radius: 13px;
+        background-color: rgb(156, 109, 7);
+        color: blue;
+    }
+    button{
+        font-size: 20px;
+        margin-top: 15px;
+        padding: 5px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        width: 50%;
+        color: white;
+        cursor: pointer;
+        background-color: rgb(0, 0, 0);
+        background: black;
+         transition: width 2s;
+    }
+    button:hover{
+        background-color: rgb(156, 109, 7);
+        color: black;
+        width: 300px;
+    }
+    .terms{
+        margin-top: 3px;
+    }
+    .terms label{
+        font-size: 18px;
+    }
+    .terms a{
+        color: rgb(27, 0, 182);
+        text-decoration: none;
+    }
+    .member{
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: black;
+    }
+    .lgn{
+        color: rgb(27, 0, 182);
+        text-decoration: none;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <h1>Login</h1>
+        <form action="#">
+            <div>
+               <input type="text" placeholder="E-Mail"> 
+            </div>
+            <div>
+                <input type="password" placeholder="Password">
+            </div>
+        </form>
+        <div class="terms">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">I agree to these</label>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <button>Login</button>
+        <div class="member">Not a member! <a href="./sign.html" id="signupLink">Register Now</a></div>
+    </div>
+
+    <script>
+        document.getElementById('signupLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = "./sign.html";
+        });
+    </script>
+</body>
+</html>
